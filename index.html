@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>One-command Windows setup</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+</html>
+<body>
+    <h1>Setup</h1>
+    Execute the following in an Administrator Powershell command prompt:
+    <pre><code class="Powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('http://COMP11529:8888/Setup-DevEnv.ps1'))</code></pre>
+</body>
