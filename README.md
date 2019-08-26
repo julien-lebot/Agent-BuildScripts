@@ -10,8 +10,8 @@
 Use the following command to build the agent from sources in `C:\dev\datadog-agent` and put built binaries in `C:\dev\datadog-agent\build`
 
 ```dockerfile
-docker run -it  \
-    -v C:\dev\datadog-agent:C:\gopath\src\github.com\datadog\datadog-agent \
-    -v C:\dev\datadog-agent\build:C\.omnibus-ruby \
+docker run -it ^
+    -v C:\dev\datadog-agent:C:\gopath\src\github.com\datadog\datadog-agent ^
+    -v C:\dev\datadog-agent\out:C:\.omnibus-ruby ^
     squeakysquak/datadog-agent-sdk:go1.12.9-windows-ltsc2019
 ```

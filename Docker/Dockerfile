@@ -8,7 +8,9 @@ ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
     --installPath C:\BuildTools `
     --add Microsoft.VisualStudio.Workload.VCTools `
+	--add Microsoft.VisualStudio.Component.Windows10SDK.17763 `
     --add Microsoft.Visualstudio.Component.Windows81sdk `
+	--add Microsoft.Component.VC.Runtime.UCRTSDK `
  || IF "%ERRORLEVEL%"=="3010" EXIT 0
 RUN powershell -Command Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 RUN powershell -Command `
