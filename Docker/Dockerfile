@@ -99,4 +99,5 @@ RUN powershell -Command `
 	Remove-Item go.zip -Force;`
 	Write-Host 'Complete.'
 
-ENTRYPOINT C:\BuildTools\Common7\Tools\VsDevCmd.bat &&
+ADD .\BuildAgent.bat C:\BuildAgent.bat
+ENTRYPOINT C:\BuildAgent.bat
